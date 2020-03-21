@@ -1,7 +1,7 @@
 body{margin:auto;padding:0;color:#000;
     -webkit-transition:all;-moz-transition:all;-ms-transition:all;-o-transition:all;transition:all;
-    font-family: "Noto Sans HK", Arial,sans-serif;
-    font-size:14.4px;line-height:170%;text-align:justify;font-weight:400}
+    font-family: "Inter", Arial,sans-serif;
+    font-size:15px;line-height:170%;text-align:justify;font-weight:400}
 p.contact{margin:0px;}
 div.about{margin:10px;}
 h1,h2,h3,h4,h5,h6,div.title,span.venue,span.highlight{font-weight:500}
@@ -18,7 +18,7 @@ div.heading div.img img{width:200px}
 div.heading span.tag{padding-right:15px}
 div.img,div.text{padding-left:10px;padding-right:10px}
 img.img_responsive{width:100%;height:auto;display:block}
-div.publication{padding-top:0px;padding-bottom:20px}
+div.publication{padding-top:0px;padding-bottom:25px}
 div.publication div.img{max-width:300px;padding-right:0px;padding-top:5px}
 div.publication div.text{max-width:650px;text-align:left;vertical-align:top}
 div.authors{font-size:100%;color:#676767}
