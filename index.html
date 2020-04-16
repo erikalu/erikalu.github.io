@@ -10,6 +10,20 @@
 
 	  gtag('config', 'UA-159450849-1');
 	</script>
+	<script>
+	/**
+	* Function that captures a click on an outbound link in Analytics.
+	* This function takes a valid URL string as an argument, and uses that URL string
+	* as the event label. Setting the transport method to 'beacon' lets the hit be sent
+	* using 'navigator.sendBeacon' in browser that support it.
+	*/
+	var captureOutboundLink = function(url) {
+	   ga('send', 'event', 'outbound', 'click', url, {
+		 'transport': 'beacon',
+		 'hitCallback': function(){document.location = url;}
+	   });
+	}
+	</script>
 	<title>Erika Lu</title>
 	<link rel="stylesheet" href="css/main.css">
 	<link href="https://fonts.googleapis.com/css?family=Inter:400,500&display=swap" rel="stylesheet">
@@ -27,7 +41,11 @@
   			<div class="text info">
   				<h1>Erika Lu</h1>
   				<p class="contact">Email: erika [at] robots [dot] ox [dot] ac [dot] uk</p>
-  				<p class="contact"><a href="https://scholar.google.com/citations?user=5cSEGh8AAAAJ&hl=en">Scholar</a> | <a href="https://github.com/erikalu">GitHub</a> | <a href="https://www.linkedin.com/in/erikalu/">LinkedIn</a></p>
+  				<p class="contact">
+                    <a href="https://scholar.google.com/citations?user=5cSEGh8AAAAJ&hl=en" onclick="captureOutboundLink('https://scholar.google.com/citations?user=5cSEGh8AAAAJ&hl=en'); return false;">Scholar</a> | 
+                    <a href="https://github.com/erikalu" onclick="captureOutboundLink('https://github.com/erikalu'); return false;">GitHub</a> | 
+                    <a href="https://www.linkedin.com/in/erikalu/" onclick="captureOutboundLink('https://www.linkedin.com/in/erikalu'); return false;">LinkedIn</a>
+                </p>
   			</div>
       </div>
 			<div class="about">
